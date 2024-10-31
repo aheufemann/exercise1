@@ -24,5 +24,16 @@ total_var <- function(data) {
 total_var(iris)
 ```
 
+This function creates a new column `total_row` which holds the count of rows in the dataset
 
+```{echo=True, include=FALSE}
+# Define new function
+total_row <- function(data) {
+  data <- data %>%
+    mutate(total_row = nrow(.))  
+}
+
+# Apply the function to the iris dataset (following the example)
+total_row(iris)
+```
 
