@@ -28,8 +28,8 @@ This function creates a new column `total_row` which holds the count of rows in 
 
 ```{echo=True, include=FALSE}
 # Define new function
-total_row <- function(data) {
-  data <- data %>%
+total_row <- function(data_new) {
+  data_new <- data_new%>%
     mutate(total_row = nrow(.))  
 }
 
