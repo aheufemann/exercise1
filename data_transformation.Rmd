@@ -1,0 +1,28 @@
+---
+title: "data_transformation"
+output: html_document
+date: "2024-10-31"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+This function creates a new column `total_var` which holds the count of columns in the dataset
+
+```{echo=True, include=FALSE}
+# Define the function
+total_var <- function(data) {
+  data <- data %>% 
+    mutate(total_var = ncol(.))
+  return(data)
+}
+
+# Apply the function to the iris dataset (example)
+total_var(iris)
+```
+
+
+
